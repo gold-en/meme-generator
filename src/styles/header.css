@@ -4,12 +4,16 @@
   height: 65px;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   color: white;
-  padding: 20px;
+  padding: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
 }
 
 .header-image {
-  height: 120%;
+  height: 80%;
   margin-right: 6px;
+  margin-left: 0px;
 }
 
 .header-title {
@@ -18,6 +22,6 @@
 }
 
 .header-project {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 500;
 }

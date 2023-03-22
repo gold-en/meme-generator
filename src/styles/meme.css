@@ -1,14 +1,15 @@
 main {
-  padding: 10px;
-  max-width: 550px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .form {
+  margin-top: 4px;
+  margin-bottom: 4px;
   display: grid;
-  grid-template-rows: 40px 40px;
-  grid-template-columns: 1fr 1fr;
-  gap: 17px;
+  grid-template-rows: 40px 40px 40px;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
 }
 
 .form-input {
@@ -30,7 +31,7 @@ main {
 
 .meme {
   position: relative;
-  min-width: 344px;
+  width: 100%;
 }
 
 .meme-image {

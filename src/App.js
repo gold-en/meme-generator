@@ -5,9 +5,11 @@ import Meme from './components/Meme';
 
 const App = () => {
   return (
-    <div class='container'>
-      <Header />
-      <Meme />
+    <div class="container">
+      <div class="wrapper">
+        <Header />
+        <Meme />
+      </div>
     </div>
   );
 };
