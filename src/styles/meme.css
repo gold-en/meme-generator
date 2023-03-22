@@ -1,5 +1,5 @@
 main {
-  width: 100%;
+  width: 350px;
 }
 
 .form {
@@ -9,7 +9,7 @@ main {
   grid-template-rows: 40px 40px 40px;
   grid-template-columns: 1fr;
   gap: 10px;
-  width: 100%;
+  width: 350px;
 }
 
 .form-input {
@@ -31,11 +31,11 @@ main {
 
 .meme {
   position: relative;
-  width: 100%;
+  width: 350px;
 }
 
 .meme-image {
-  width: 100%;
+  width: 350px;
   border-radius: 3px;
   max-height: 400px;
 }
