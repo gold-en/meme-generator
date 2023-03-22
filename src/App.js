@@ -6,10 +6,8 @@ import Meme from './components/Meme';
 const App = () => {
   return (
     <div class="container">
-      <div class="wrapper">
-        <Header />
-        <Meme />
-      </div>
+      <Header />
+      <Meme />
     </div>
   );
 };

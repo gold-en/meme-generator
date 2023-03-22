@@ -4,10 +4,11 @@
   height: 65px;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   color: white;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 100%;
+  width: 350px;
 }
 
 .header-image {
