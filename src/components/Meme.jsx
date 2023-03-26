@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/meme.css';
-import memeData from '../memeData';
+// import memeData from '../memeData';
 // I destructured the memeData which is an object, then destructured the data property which is an object to get the memes property which is an array then renamed it to memesArray
-const {
-  success,
-  data: { memes: memesArray },
-} = memeData;
+// const {
+//   success,
+//   data: { memes: memesArray },
+// } = memeData;
 
 const Meme = () => {
   const [meme, setMeme] = React.useState({
@@ -14,14 +14,21 @@ const Meme = () => {
     randomImage: 'http://i.imgflip.com/1bij.jpg',
   });
 
-  const [allMemeImages, setAllMemeImages] = React.useState(memesArray);
+  const [allMemes, setAllMemes] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+      .then(res => res.json())
+      .then(data => setAllMemes(data.data.memes));
+  }, []);
 
   const getMemeImage = () => {
-    const randomNo = Math.trunc(Math.random() * allMemeImages.length);
-    const randomImageUrl = allMemeImages[randomNo].url;
+    const randomNo = Math.trunc(Math.random() * allMemes.length);
+    console.log(allMemes);
+    const url = allMemes[randomNo].url;
     setMeme(preMeme => ({
       ...preMeme,
-      randomImage: randomImageUrl,
+      randomImage: url,
     }));
   };
 
@@ -58,7 +65,7 @@ const Meme = () => {
         </button>
       </div>
       <div className="meme">
-        <img src={meme.randomImage} className="meme-image" />
+        <img src={meme.randomImage} className="meme-image" alt="meme" />
         <h2 className="meme-text top">{meme.topText}</h2>
         <h2 className="meme-text bottom">{meme.bottomText}</h2>
       </div>
@@ -67,3 +74,13 @@ const Meme = () => {
 };
 
 export default Meme;
+
+//useEffect with async function//
+// React.useEffect(() => {
+//   async function getMemes() {
+//     const res = await fetch('https://api.imgflip.com/get_memes');
+//     const data = await res.json();
+//     setAllMemes(data.data.memes);
+//   }
+//   getMemes();
+// }, []);

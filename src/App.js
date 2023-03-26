@@ -5,7 +5,7 @@ import Meme from './components/Meme';
 
 const App = () => {
   return (
-    <div class="container">
+    <div className="container">
       <Header />
       <Meme />
     </div>
